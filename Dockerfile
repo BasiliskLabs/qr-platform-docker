@@ -11,5 +11,6 @@ RUN go-wrapper download
 RUN go-wrapper install
 
 EXPOSE 80
+COPY ./entrypoint.sh .
 
-CMD "echo $REDIRECT > ./redirect.json && go-wrapper run"
+CMD ["entrypoint.sh"]
