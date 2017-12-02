@@ -13,4 +13,6 @@ RUN go-wrapper install
 EXPOSE 80
 COPY ./entrypoint.sh .
 
+RUN chmod +x entrypoint.sh
+
 CMD ["./entrypoint.sh"]
