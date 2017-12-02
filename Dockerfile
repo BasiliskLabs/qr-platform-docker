@@ -13,6 +13,8 @@ RUN go-wrapper install
 ARG redirect
 
 EXPOSE 80
-RUN echo $redirect > redirect.json
+RUN echo $redirect > ./redirect.json
+RUN ls
+RUN cat redirect.json
 
 CMD ["go-wrapper", "run"]
