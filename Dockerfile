@@ -10,7 +10,9 @@ WORKDIR /go/src/app/qr-platform
 RUN go-wrapper download
 RUN go-wrapper install
 
+ARG redirect
+
 EXPOSE 80
-RUN echo $REDIRECT > redirect.json
+RUN echo $redirect > redirect.json
 
 CMD ["go-wrapper", "run"]
