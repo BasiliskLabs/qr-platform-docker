@@ -12,4 +12,4 @@ RUN go-wrapper install
 
 EXPOSE 80
 
-CMD ["echo", "$REDIRECT", ">", "./redirect.json", "&&" "go-wrapper", "run"]
+CMD "echo $REDIRECT > ./redirect.json && go-wrapper run"
