@@ -11,6 +11,6 @@ RUN go-wrapper download
 RUN go-wrapper install
 
 EXPOSE 80
-COPY redirects.json .
+RUN echo $REDIRECT > redirect.json
 
 CMD ["go-wrapper", "run"]
